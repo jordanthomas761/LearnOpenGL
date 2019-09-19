@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
+		<key>Color.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>Coordinate Systems.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,16 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+		<key>Lighting maps.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>Materials.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 		<key>Shaders.xcscheme</key>
 		<dict>
@@ -42,6 +57,21 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>6D2407BF21D2880C003B68D5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6D376CF821424DA3006E23CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6D3997E321DADE3E00365D14</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6D66CFD6205937170071F0C0</key>
 		<dict>
 			<key>primary</key>

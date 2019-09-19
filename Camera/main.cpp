@@ -21,6 +21,7 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow*);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
+glm::mat4 myLookAt(glm::vec3 position, glm::vec3 target, glm::vec3 worldUp);
 
 int SCR_WIDTH = 800;
 int SCR_HEIGHT = 600;
@@ -137,8 +138,8 @@ int main(int argc, const char * argv[]) {
     
     // Create Vertex Buffer Object VBO
     unsigned int VBO, VAO;
+	glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
-    glGenVertexArrays(1, &VAO);
     
     glBindVertexArray(VAO);
     
@@ -239,7 +240,8 @@ int main(int argc, const char * argv[]) {
         float camZ = cos(glfwGetTime()) * radius;
         glm::mat4 view;
         // note that we're translating the scene in the reverse direction of where we want to move
-        view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
+		//view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
+		view = myLookAt(cameraPos, cameraPos + cameraFront, cameraUp);
         
         glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
         
@@ -274,7 +276,7 @@ void processInput(GLFWwindow* window){
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
         glfwSetWindowShouldClose(window, true);
     }
-    if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS){
+    if (glfwGetKey(window, GLFW_KEY_Z)	){
         GLint data;
         glGetIntegerv(GL_POLYGON_MODE, &data);
         
@@ -304,6 +306,7 @@ void processInput(GLFWwindow* window){
         cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp))*cameraSpeed;
     if(glfwGetKey(window, GLFW_KEY_D))
         cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp))*cameraSpeed;
+	cameraPos.y = 0;
 	
 	
 }
@@ -346,5 +349,29 @@ void scroll_callback(GLFWwindow* window, double xoffset, double yoffset){
 		fov = 1.0;
 	if (fov >= 45.0f)
 		fov = 45.0f;
+}
+glm::mat4 myLookAt(glm::vec3 position, glm::vec3 target, glm::vec3 worldUp){
+	glm::mat4 rotaion;
+	glm::mat4 translation;
+	
+	glm::vec3 yaxis = glm::normalize(position - target);
+	glm::vec3 xaxis = glm::normalize(glm::cross(glm::normalize(worldUp), yaxis));
+	glm::vec3 zaxis = glm::cross(yaxis, xaxis);
+	
+	rotaion[0][0] = xaxis.x;
+	rotaion[1][0] = xaxis.y;
+	rotaion[2][0] = xaxis.z;
+	rotaion[0][1] = zaxis.x;
+	rotaion[1][1] = zaxis.y;
+	rotaion[2][1] = zaxis.z;
+	rotaion[0][2] = yaxis.x;
+	rotaion[1][2] = yaxis.y;
+	rotaion[2][2] = yaxis.z;
+	
+	translation[3][0] = -position.x;
+	translation[3][1] = -position.y;
+	translation[3][2] = -position.z;
+
+	return rotaion * translation;
 }
 
