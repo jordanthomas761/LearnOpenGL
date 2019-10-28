@@ -50,6 +50,20 @@
 		6D66CFE7205A0BB90071F0C0 /* stb_image.h in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE0A272017722C0016D8F9 /* stb_image.h */; };
 		6D66CFE8205A0BB90071F0C0 /* shader.h in Sources */ = {isa = PBXBuildFile; fileRef = 6D04B7FA20138E590074724F /* shader.h */; };
 		6D66CFE9205A0BB90071F0C0 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DCC9AA52010553800072C65 /* glad.c */; };
+		6D85EDF6236687E6007A4FC3 /* FragmentShader.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DF8B5FD21ECF5410048BF01 /* FragmentShader.fsh */; };
+		6D85EDF7236687E6007A4FC3 /* matrix.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D85EDEE23664969007A4FC3 /* matrix.jpg */; };
+		6D85EDF8236687E6007A4FC3 /* Lamp.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DF8B5FB21ECF5400048BF01 /* Lamp.fsh */; };
+		6D85EDF9236687E6007A4FC3 /* VertexShader.vsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DF8B5FC21ECF5400048BF01 /* VertexShader.vsh */; };
+		6D85EDFA236687E6007A4FC3 /* container2_specular.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D91054C22DB27E300A7FE6D /* container2_specular.png */; };
+		6D85EDFC2366880D007A4FC3 /* container2.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DFAACDE22A0A75900C2E72D /* container2.png */; };
+		6D85EE022366887C007A4FC3 /* FragmentShader.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D2407D221D3E85D003B68D5 /* FragmentShader.fsh */; };
+		6D85EE032366887F007A4FC3 /* Lamp.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D2407D121D3E85D003B68D5 /* Lamp.fsh */; };
+		6D85EE0423668881007A4FC3 /* VertexShader.vsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D2407D021D3E85D003B68D5 /* VertexShader.vsh */; };
+		6D85EE052366888C007A4FC3 /* Gouraud.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D00817821CFC4BF0042853C /* Gouraud.fsh */; };
+		6D85EE062366888E007A4FC3 /* Gouraud.vsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D00817721CFC4AE0042853C /* Gouraud.vsh */; };
+		6D85EE0723668890007A4FC3 /* Lamp.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DBED76621452FED009E7721 /* Lamp.fsh */; };
+		6D85EE0823668892007A4FC3 /* FragmentShader.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D376D0B214276BE006E23CD /* FragmentShader.fsh */; };
+		6D85EE0923668894007A4FC3 /* VertexShader.vsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D376D0A2142642F006E23CD /* VertexShader.vsh */; };
 		6D91054622D888E600A7FE6D /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D91054522D888E600A7FE6D /* libglfw.dylib */; };
 		6D91054722D8890100A7FE6D /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D91054522D888E600A7FE6D /* libglfw.dylib */; };
 		6D91054822D8890B00A7FE6D /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D91054522D888E600A7FE6D /* libglfw.dylib */; };
@@ -107,30 +121,29 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		6D2407BE21D2880C003B68D5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
 			files = (
+				6D85EE022366887C007A4FC3 /* FragmentShader.fsh in CopyFiles */,
+				6D85EE032366887F007A4FC3 /* Lamp.fsh in CopyFiles */,
+				6D85EE0423668881007A4FC3 /* VertexShader.vsh in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6D376CF721424DA3006E23CD /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
 			files = (
+				6D85EE052366888C007A4FC3 /* Gouraud.fsh in CopyFiles */,
+				6D85EE062366888E007A4FC3 /* Gouraud.vsh in CopyFiles */,
+				6D85EE0823668892007A4FC3 /* FragmentShader.fsh in CopyFiles */,
+				6D85EE0923668894007A4FC3 /* VertexShader.vsh in CopyFiles */,
+				6D85EE0723668890007A4FC3 /* Lamp.fsh in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-		6D3997E221DADE3E00365D14 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6D66CFD5205937170071F0C0 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -140,6 +153,21 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		6D85EDF5236687BA007A4FC3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				6D85EDFC2366880D007A4FC3 /* container2.png in CopyFiles */,
+				6D85EDF6236687E6007A4FC3 /* FragmentShader.fsh in CopyFiles */,
+				6D85EDF7236687E6007A4FC3 /* matrix.jpg in CopyFiles */,
+				6D85EDF8236687E6007A4FC3 /* Lamp.fsh in CopyFiles */,
+				6D85EDF9236687E6007A4FC3 /* VertexShader.vsh in CopyFiles */,
+				6D85EDFA236687E6007A4FC3 /* container2_specular.png in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6DCC9A852010535200072C65 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -209,7 +237,7 @@
 		6D376D0A2142642F006E23CD /* VertexShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = VertexShader.vsh; sourceTree = "<group>"; };
 		6D376D0B214276BE006E23CD /* FragmentShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = FragmentShader.fsh; sourceTree = "<group>"; };
 		6D3997E421DADE3E00365D14 /* Lighting maps */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Lighting maps"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D3997E621DADE3E00365D14 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6D3997E621DADE3E00365D14 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = "../../../../Users/jordanthomas/Documents/Projects/LearnOpenGL/Lighting maps/main.cpp"; sourceTree = DEVELOPER_DIR; };
 		6D66CFD7205937170071F0C0 /* Camera */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Camera; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D66CFD9205937170071F0C0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6D66CFEA205A0CE10071F0C0 /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
@@ -779,7 +807,7 @@
 		6DE50D5C20126FF500EC55DB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6DF8B5FB21ECF5400048BF01 /* Lamp.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lamp.fsh; sourceTree = "<group>"; };
 		6DF8B5FC21ECF5400048BF01 /* VertexShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = VertexShader.vsh; sourceTree = "<group>"; };
-		6DF8B5FD21ECF5410048BF01 /* FragmentShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FragmentShader.fsh; sourceTree = "<group>"; };
+		6DF8B5FD21ECF5410048BF01 /* FragmentShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = FragmentShader.fsh; path = "../../../../Users/jordanthomas/Documents/Projects/LearnOpenGL/Lighting maps/FragmentShader.fsh"; sourceTree = DEVELOPER_DIR; };
 		6DFA818E20328C4E00A9474E /* Transformations */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Transformations; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DFA819020328C4E00A9474E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6DFAACDB22A0A59100C2E72D /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../usr/local/Cellar/glfw/3.3/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
@@ -1754,7 +1782,7 @@
 			buildPhases = (
 				6D3997E021DADE3E00365D14 /* Sources */,
 				6D3997E121DADE3E00365D14 /* Frameworks */,
-				6D3997E221DADE3E00365D14 /* CopyFiles */,
+				6D85EDF5236687BA007A4FC3 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -2257,7 +2285,7 @@
 					"$(inherited)",
 					/usr/local/Cellar/glfw/3.2.1/lib,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -2316,7 +2344,7 @@
 					"$(inherited)",
 					/usr/local/Cellar/glfw/3.2.1/lib,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
