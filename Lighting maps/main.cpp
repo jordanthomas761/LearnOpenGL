@@ -1,5 +1,4 @@
 #include <iostream>
-#include <experimental/filesystem>
 #include <cmath>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
@@ -139,11 +138,11 @@ int main(int argc, const char * argv[]) {
 	glEnableVertexAttribArray(0);
 	
 	//load texture
-	unsigned int texture1 = loadTexture(std::experimental::filesystem::path("container2.png").c_str());
+	unsigned int texture1 = loadTexture("container2.png");
 	
-	unsigned int specularMap = loadTexture(std::experimental::filesystem::path("container2_specular.png").c_str());
+	unsigned int specularMap = loadTexture("container2_specular.png");
 	
-	unsigned int emissionMap = loadTexture(std::experimental::filesystem::path("matrix.jpg").c_str());
+	unsigned int emissionMap = loadTexture("matrix.jpg");
 	
 	lightingShader.use();
 	lightingShader.setInt("material.diffuse", 0);

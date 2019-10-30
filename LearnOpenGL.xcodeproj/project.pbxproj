@@ -42,6 +42,7 @@
 		6D3997F121DADEE200365D14 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A942010536A00072C65 /* CoreVideo.framework */; };
 		6D3997F221DADEF200365D14 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A982010539200072C65 /* Cocoa.framework */; };
 		6D3D8BC5212B632A00AFDD93 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DCC9A8A2010535200072C65 /* main.cpp */; };
+		6D48D422236925B8009FA1F8 /* FragmentShader.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DF8B5FD21ECF5410048BF01 /* FragmentShader.fsh */; };
 		6D66CFDA205937170071F0C0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D66CFD9205937170071F0C0 /* main.cpp */; };
 		6D66CFE3205A0B660071F0C0 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A922010536300072C65 /* OpenGL.framework */; };
 		6D66CFE4205A0B6D0071F0C0 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A942010536A00072C65 /* CoreVideo.framework */; };
@@ -50,7 +51,6 @@
 		6D66CFE7205A0BB90071F0C0 /* stb_image.h in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE0A272017722C0016D8F9 /* stb_image.h */; };
 		6D66CFE8205A0BB90071F0C0 /* shader.h in Sources */ = {isa = PBXBuildFile; fileRef = 6D04B7FA20138E590074724F /* shader.h */; };
 		6D66CFE9205A0BB90071F0C0 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DCC9AA52010553800072C65 /* glad.c */; };
-		6D85EDF6236687E6007A4FC3 /* FragmentShader.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DF8B5FD21ECF5410048BF01 /* FragmentShader.fsh */; };
 		6D85EDF7236687E6007A4FC3 /* matrix.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D85EDEE23664969007A4FC3 /* matrix.jpg */; };
 		6D85EDF8236687E6007A4FC3 /* Lamp.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DF8B5FB21ECF5400048BF01 /* Lamp.fsh */; };
 		6D85EDF9236687E6007A4FC3 /* VertexShader.vsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DF8B5FC21ECF5400048BF01 /* VertexShader.vsh */; };
@@ -161,7 +161,7 @@
 			dstSubfolderSpec = 7;
 			files = (
 				6D85EDFC2366880D007A4FC3 /* container2.png in CopyFiles */,
-				6D85EDF6236687E6007A4FC3 /* FragmentShader.fsh in CopyFiles */,
+				6D48D422236925B8009FA1F8 /* FragmentShader.fsh in CopyFiles */,
 				6D85EDF7236687E6007A4FC3 /* matrix.jpg in CopyFiles */,
 				6D85EDF8236687E6007A4FC3 /* Lamp.fsh in CopyFiles */,
 				6D85EDF9236687E6007A4FC3 /* VertexShader.vsh in CopyFiles */,
@@ -967,6 +967,13 @@
 			path = "Lighting maps";
 			sourceTree = "<group>";
 		};
+		6D48D42123692588009FA1F8 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		6D66CFD8205937170071F0C0 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
@@ -982,6 +989,7 @@
 		6DCC9A7E2010535200072C65 = {
 			isa = PBXGroup;
 			children = (
+				6D48D42123692588009FA1F8 /* resources */,
 				6DE50D01201249A000EC55DB /* common */,
 				6DE50CDC20109A2B00EC55DB /* include */,
 				6DCC9A892010535200072C65 /* HelloTriangle */,
@@ -2164,7 +2172,7 @@
 					"$(inherited)",
 					/usr/local/Cellar/glfw/3.3/lib,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2185,7 +2193,7 @@
 					"$(inherited)",
 					/usr/local/Cellar/glfw/3.3/lib,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
