@@ -32,7 +32,6 @@
 		6D376D0621424EA0006E23CD /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A942010536A00072C65 /* CoreVideo.framework */; };
 		6D376D0721424EA7006E23CD /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A962010537100072C65 /* IOKit.framework */; };
 		6D376D0821424EB1006E23CD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A982010539200072C65 /* Cocoa.framework */; };
-		6D3997E721DADE3E00365D14 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D3997E621DADE3E00365D14 /* main.cpp */; };
 		6D3997EB21DADEC100365D14 /* stb_image.h in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE0A272017722C0016D8F9 /* stb_image.h */; };
 		6D3997EC21DADEC100365D14 /* shader.h in Sources */ = {isa = PBXBuildFile; fileRef = 6D04B7FA20138E590074724F /* shader.h */; };
 		6D3997ED21DADEC100365D14 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DCC9AA52010553800072C65 /* glad.c */; };
@@ -42,7 +41,6 @@
 		6D3997F121DADEE200365D14 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A942010536A00072C65 /* CoreVideo.framework */; };
 		6D3997F221DADEF200365D14 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A982010539200072C65 /* Cocoa.framework */; };
 		6D3D8BC5212B632A00AFDD93 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DCC9A8A2010535200072C65 /* main.cpp */; };
-		6D48D422236925B8009FA1F8 /* FragmentShader.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DF8B5FD21ECF5410048BF01 /* FragmentShader.fsh */; };
 		6D66CFDA205937170071F0C0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D66CFD9205937170071F0C0 /* main.cpp */; };
 		6D66CFE3205A0B660071F0C0 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A922010536300072C65 /* OpenGL.framework */; };
 		6D66CFE4205A0B6D0071F0C0 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A942010536A00072C65 /* CoreVideo.framework */; };
@@ -102,6 +100,8 @@
 		6DFE0A2E2017743B0016D8F9 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A962010537100072C65 /* IOKit.framework */; };
 		6DFE0A2F201774450016D8F9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A982010539200072C65 /* Cocoa.framework */; };
 		6DFE0A3320177D010016D8F9 /* stb_image.h in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE0A272017722C0016D8F9 /* stb_image.h */; };
+		6FA7C3A8236CD3DA008032AD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FA7C3A7236CD3D9008032AD /* main.cpp */; };
+		6FA7C3AA236CD43F008032AD /* FragmentShader.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6FA7C3A9236CD40F008032AD /* FragmentShader.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -161,10 +161,10 @@
 			dstSubfolderSpec = 7;
 			files = (
 				6D85EDFC2366880D007A4FC3 /* container2.png in CopyFiles */,
-				6D48D422236925B8009FA1F8 /* FragmentShader.fsh in CopyFiles */,
 				6D85EDF7236687E6007A4FC3 /* matrix.jpg in CopyFiles */,
 				6D85EDF8236687E6007A4FC3 /* Lamp.fsh in CopyFiles */,
 				6D85EDF9236687E6007A4FC3 /* VertexShader.vsh in CopyFiles */,
+				6FA7C3AA236CD43F008032AD /* FragmentShader.fsh in CopyFiles */,
 				6D85EDFA236687E6007A4FC3 /* container2_specular.png in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,7 +237,6 @@
 		6D376D0A2142642F006E23CD /* VertexShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = VertexShader.vsh; sourceTree = "<group>"; };
 		6D376D0B214276BE006E23CD /* FragmentShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = FragmentShader.fsh; sourceTree = "<group>"; };
 		6D3997E421DADE3E00365D14 /* Lighting maps */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Lighting maps"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D3997E621DADE3E00365D14 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = "../../../../Users/jordanthomas/Documents/Projects/LearnOpenGL/Lighting maps/main.cpp"; sourceTree = DEVELOPER_DIR; };
 		6D66CFD7205937170071F0C0 /* Camera */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Camera; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D66CFD9205937170071F0C0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6D66CFEA205A0CE10071F0C0 /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
@@ -807,13 +806,14 @@
 		6DE50D5C20126FF500EC55DB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6DF8B5FB21ECF5400048BF01 /* Lamp.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lamp.fsh; sourceTree = "<group>"; };
 		6DF8B5FC21ECF5400048BF01 /* VertexShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = VertexShader.vsh; sourceTree = "<group>"; };
-		6DF8B5FD21ECF5410048BF01 /* FragmentShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = FragmentShader.fsh; path = "../../../../Users/jordanthomas/Documents/Projects/LearnOpenGL/Lighting maps/FragmentShader.fsh"; sourceTree = DEVELOPER_DIR; };
 		6DFA818E20328C4E00A9474E /* Transformations */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Transformations; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DFA819020328C4E00A9474E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6DFAACDB22A0A59100C2E72D /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../usr/local/Cellar/glfw/3.3/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 		6DFAACDE22A0A75900C2E72D /* container2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = container2.png; sourceTree = "<group>"; };
 		6DFE0A272017722C0016D8F9 /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
 		6DFE0A302017762F0016D8F9 /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpg; sourceTree = "<group>"; };
+		6FA7C3A7236CD3D9008032AD /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6FA7C3A9236CD40F008032AD /* FragmentShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FragmentShader.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -955,14 +955,10 @@
 		6D3997E521DADE3E00365D14 /* Lighting maps */ = {
 			isa = PBXGroup;
 			children = (
-				6DF8B5FD21ECF5410048BF01 /* FragmentShader.fsh */,
-				6D85EDED236648AA007A4FC3 /* lighting_maps_specular_color.png */,
-				6D85EDEE23664969007A4FC3 /* matrix.jpg */,
 				6DF8B5FB21ECF5400048BF01 /* Lamp.fsh */,
 				6DF8B5FC21ECF5400048BF01 /* VertexShader.vsh */,
-				6D91054C22DB27E300A7FE6D /* container2_specular.png */,
-				6DFAACDE22A0A75900C2E72D /* container2.png */,
-				6D3997E621DADE3E00365D14 /* main.cpp */,
+				6FA7C3A9236CD40F008032AD /* FragmentShader.fsh */,
+				6FA7C3A7236CD3D9008032AD /* main.cpp */,
 			);
 			path = "Lighting maps";
 			sourceTree = "<group>";
@@ -970,6 +966,10 @@
 		6D48D42123692588009FA1F8 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				6D85EDED236648AA007A4FC3 /* lighting_maps_specular_color.png */,
+				6D85EDEE23664969007A4FC3 /* matrix.jpg */,
+				6D91054C22DB27E300A7FE6D /* container2_specular.png */,
+				6DFAACDE22A0A75900C2E72D /* container2.png */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -2009,9 +2009,9 @@
 			files = (
 				6D3997EB21DADEC100365D14 /* stb_image.h in Sources */,
 				6D3997EC21DADEC100365D14 /* shader.h in Sources */,
+				6FA7C3A8236CD3DA008032AD /* main.cpp in Sources */,
 				6D3997ED21DADEC100365D14 /* glad.c in Sources */,
 				6D3997EE21DADEC100365D14 /* camera.h in Sources */,
-				6D3997E721DADE3E00365D14 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
