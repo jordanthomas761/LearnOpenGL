@@ -52,7 +52,6 @@
 		6D85EDF7236687E6007A4FC3 /* matrix.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D85EDEE23664969007A4FC3 /* matrix.jpg */; };
 		6D85EDF8236687E6007A4FC3 /* Lamp.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DF8B5FB21ECF5400048BF01 /* Lamp.fsh */; };
 		6D85EDF9236687E6007A4FC3 /* VertexShader.vsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DF8B5FC21ECF5400048BF01 /* VertexShader.vsh */; };
-		6D85EDFA236687E6007A4FC3 /* container2_specular.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D91054C22DB27E300A7FE6D /* container2_specular.png */; };
 		6D85EDFC2366880D007A4FC3 /* container2.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DFAACDE22A0A75900C2E72D /* container2.png */; };
 		6D85EE022366887C007A4FC3 /* FragmentShader.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D2407D221D3E85D003B68D5 /* FragmentShader.fsh */; };
 		6D85EE032366887F007A4FC3 /* Lamp.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D2407D121D3E85D003B68D5 /* Lamp.fsh */; };
@@ -65,6 +64,17 @@
 		6D91054622D888E600A7FE6D /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D91054522D888E600A7FE6D /* libglfw.dylib */; };
 		6D91054722D8890100A7FE6D /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D91054522D888E600A7FE6D /* libglfw.dylib */; };
 		6D91054822D8890B00A7FE6D /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D91054522D888E600A7FE6D /* libglfw.dylib */; };
+		6DA1373C236E3F0000E4BDCF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DA1373B236E3F0000E4BDCF /* main.cpp */; };
+		6DA13740236E3F1200E4BDCF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A982010539200072C65 /* Cocoa.framework */; };
+		6DA13741236E3F2800E4BDCF /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A942010536A00072C65 /* CoreVideo.framework */; };
+		6DA13742236E3F3000E4BDCF /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A962010537100072C65 /* IOKit.framework */; };
+		6DA13743236E3F3F00E4BDCF /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A922010536300072C65 /* OpenGL.framework */; };
+		6DA13747236E3FC500E4BDCF /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D91054522D888E600A7FE6D /* libglfw.dylib */; };
+		6DA1374A236E402F00E4BDCF /* camera.h in Sources */ = {isa = PBXBuildFile; fileRef = 6D1A3F9921414E0F008CDF4F /* camera.h */; };
+		6DA1374B236E403100E4BDCF /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DCC9AA52010553800072C65 /* glad.c */; };
+		6DA1374C236E403400E4BDCF /* shader.h in Sources */ = {isa = PBXBuildFile; fileRef = 6D04B7FA20138E590074724F /* shader.h */; };
+		6DA1374D236E403700E4BDCF /* stb_image.h in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE0A272017722C0016D8F9 /* stb_image.h */; };
+		6DA137532370651000E4BDCF /* container2_specular.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DA13751237064E100E4BDCF /* container2_specular.png */; };
 		6DCC9A932010536300072C65 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A922010536300072C65 /* OpenGL.framework */; };
 		6DCC9A952010536A00072C65 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A942010536A00072C65 /* CoreVideo.framework */; };
 		6DCC9A972010537100072C65 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A962010537100072C65 /* IOKit.framework */; };
@@ -161,13 +171,22 @@
 			dstSubfolderSpec = 7;
 			files = (
 				6D85EDFC2366880D007A4FC3 /* container2.png in CopyFiles */,
+				6DA137532370651000E4BDCF /* container2_specular.png in CopyFiles */,
 				6D85EDF7236687E6007A4FC3 /* matrix.jpg in CopyFiles */,
 				6D85EDF8236687E6007A4FC3 /* Lamp.fsh in CopyFiles */,
 				6D85EDF9236687E6007A4FC3 /* VertexShader.vsh in CopyFiles */,
 				6FA7C3AA236CD43F008032AD /* FragmentShader.fsh in CopyFiles */,
-				6D85EDFA236687E6007A4FC3 /* container2_specular.png in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DA13737236E3F0000E4BDCF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 		6DCC9A852010535200072C65 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -243,10 +262,12 @@
 		6D66CFEB205A0CE10071F0C0 /* VertexShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = VertexShader.glsl; sourceTree = "<group>"; };
 		6D66CFEC205A0CE10071F0C0 /* FragmentShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = FragmentShader.glsl; sourceTree = "<group>"; };
 		6D66CFED205A0CE20071F0C0 /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpg; sourceTree = "<group>"; };
-		6D85EDED236648AA007A4FC3 /* lighting_maps_specular_color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lighting_maps_specular_color.png; sourceTree = "<group>"; };
 		6D85EDEE23664969007A4FC3 /* matrix.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = matrix.jpg; sourceTree = "<group>"; };
 		6D91054522D888E600A7FE6D /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = ../../../../../usr/local/Cellar/glfw/3.3/lib/libglfw.dylib; sourceTree = "<group>"; };
-		6D91054C22DB27E300A7FE6D /* container2_specular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = container2_specular.png; sourceTree = "<group>"; };
+		6DA13739236E3F0000E4BDCF /* Light casters */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Light casters"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DA1373B236E3F0000E4BDCF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6DA13751237064E100E4BDCF /* container2_specular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = container2_specular.png; sourceTree = "<group>"; };
+		6DA13752237064E100E4BDCF /* lighting_maps_specular_color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lighting_maps_specular_color.png; sourceTree = "<group>"; };
 		6DA4072B2019B709009A454A /* VertexShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = VertexShader.glsl; sourceTree = "<group>"; };
 		6DA4072C2019B81C009A454A /* FragmentShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = FragmentShader.glsl; sourceTree = "<group>"; };
 		6DA9F10A20127ABA003BEBE0 /* glfw3.pc */ = {isa = PBXFileReference; lastKnownFileType = text; name = glfw3.pc; path = ../../../../../usr/local/Cellar/glfw/3.2.1/lib/pkgconfig/glfw3.pc; sourceTree = "<group>"; };
@@ -865,6 +886,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6DA13736236E3F0000E4BDCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA13747236E3FC500E4BDCF /* libglfw.dylib in Frameworks */,
+				6DA13740236E3F1200E4BDCF /* Cocoa.framework in Frameworks */,
+				6DA13743236E3F3F00E4BDCF /* OpenGL.framework in Frameworks */,
+				6DA13741236E3F2800E4BDCF /* CoreVideo.framework in Frameworks */,
+				6DA13742236E3F3000E4BDCF /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6DCC9A842010535200072C65 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -966,9 +999,9 @@
 		6D48D42123692588009FA1F8 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				6D85EDED236648AA007A4FC3 /* lighting_maps_specular_color.png */,
+				6DA13751237064E100E4BDCF /* container2_specular.png */,
+				6DA13752237064E100E4BDCF /* lighting_maps_specular_color.png */,
 				6D85EDEE23664969007A4FC3 /* matrix.jpg */,
-				6D91054C22DB27E300A7FE6D /* container2_specular.png */,
 				6DFAACDE22A0A75900C2E72D /* container2.png */,
 			);
 			path = resources;
@@ -986,6 +1019,14 @@
 			path = Camera;
 			sourceTree = "<group>";
 		};
+		6DA1373A236E3F0000E4BDCF /* Light casters */ = {
+			isa = PBXGroup;
+			children = (
+				6DA1373B236E3F0000E4BDCF /* main.cpp */,
+			);
+			path = "Light casters";
+			sourceTree = "<group>";
+		};
 		6DCC9A7E2010535200072C65 = {
 			isa = PBXGroup;
 			children = (
@@ -1000,6 +1041,7 @@
 				6D376CFA21424DA3006E23CD /* Color */,
 				6D2407C121D2880C003B68D5 /* Materials */,
 				6D3997E521DADE3E00365D14 /* Lighting maps */,
+				6DA1373A236E3F0000E4BDCF /* Light casters */,
 				6DCC9A882010535200072C65 /* Products */,
 				6DCC9A912010536300072C65 /* Frameworks */,
 			);
@@ -1017,6 +1059,7 @@
 				6D376CF921424DA3006E23CD /* Color */,
 				6D2407C021D2880C003B68D5 /* Materials */,
 				6D3997E421DADE3E00365D14 /* Lighting maps */,
+				6DA13739236E3F0000E4BDCF /* Light casters */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1819,6 +1862,23 @@
 			productReference = 6D66CFD7205937170071F0C0 /* Camera */;
 			productType = "com.apple.product-type.tool";
 		};
+		6DA13738236E3F0000E4BDCF /* Light casters */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DA1373F236E3F0000E4BDCF /* Build configuration list for PBXNativeTarget "Light casters" */;
+			buildPhases = (
+				6DA13735236E3F0000E4BDCF /* Sources */,
+				6DA13736236E3F0000E4BDCF /* Frameworks */,
+				6DA13737236E3F0000E4BDCF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Light casters";
+			productName = "Light casters";
+			productReference = 6DA13739236E3F0000E4BDCF /* Light casters */;
+			productType = "com.apple.product-type.tool";
+		};
 		6DCC9A862010535200072C65 /* HelloTriangle */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6DCC9A8E2010535200072C65 /* Build configuration list for PBXNativeTarget "HelloTriangle" */;
@@ -1930,6 +1990,10 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
+					6DA13738236E3F0000E4BDCF = {
+						CreatedOnToolsVersion = 11.2;
+						ProvisioningStyle = Automatic;
+					};
 					6DCC9A862010535200072C65 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -1974,6 +2038,7 @@
 				6D376CF821424DA3006E23CD /* Color */,
 				6D2407BF21D2880C003B68D5 /* Materials */,
 				6D3997E321DADE3E00365D14 /* Lighting maps */,
+				6DA13738236E3F0000E4BDCF /* Light casters */,
 			);
 		};
 /* End PBXProject section */
@@ -2023,6 +2088,18 @@
 				6D66CFE8205A0BB90071F0C0 /* shader.h in Sources */,
 				6D66CFE9205A0BB90071F0C0 /* glad.c in Sources */,
 				6D66CFDA205937170071F0C0 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DA13735236E3F0000E4BDCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA1374B236E403100E4BDCF /* glad.c in Sources */,
+				6DA1373C236E3F0000E4BDCF /* main.cpp in Sources */,
+				6DA1374A236E402F00E4BDCF /* camera.h in Sources */,
+				6DA1374C236E403400E4BDCF /* shader.h in Sources */,
+				6DA1374D236E403700E4BDCF /* stb_image.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2085,6 +2162,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46J356Q367;
 				HEADER_SEARCH_PATHS = (
@@ -2106,6 +2184,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46J356Q367;
 				HEADER_SEARCH_PATHS = (
@@ -2126,6 +2205,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46J356Q367;
 				HEADER_SEARCH_PATHS = (
@@ -2144,6 +2224,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46J356Q367;
 				HEADER_SEARCH_PATHS = (
@@ -2162,6 +2243,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46J356Q367;
 				HEADER_SEARCH_PATHS = (
@@ -2183,6 +2265,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46J356Q367;
 				HEADER_SEARCH_PATHS = (
@@ -2202,6 +2285,7 @@
 		6D66CFDB205937170071F0C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46J356Q367;
 				HEADER_SEARCH_PATHS = (
@@ -2220,6 +2304,7 @@
 		6D66CFDC205937170071F0C0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46J356Q367;
 				HEADER_SEARCH_PATHS = (
@@ -2231,6 +2316,45 @@
 					/usr/local/Cellar/glfw/3.3/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6DA1373D236E3F0000E4BDCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = "Light casters/Light casters.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46J356Q367;
+				ENABLE_HARDENED_RUNTIME = NO;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.3/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6DA1373E236E3F0000E4BDCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = "Light casters/Light casters.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46J356Q367;
+				ENABLE_HARDENED_RUNTIME = NO;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.3/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -2361,6 +2485,7 @@
 		6DCC9A8F2010535200072C65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46J356Q367;
 				HEADER_SEARCH_PATHS = (
@@ -2379,6 +2504,7 @@
 		6DCC9A902010535200072C65 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46J356Q367;
 				HEADER_SEARCH_PATHS = (
@@ -2397,6 +2523,7 @@
 		6DD6EB51203CA2D70071BB38 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46J356Q367;
 				HEADER_SEARCH_PATHS = (
@@ -2414,6 +2541,7 @@
 		6DD6EB52203CA2D70071BB38 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46J356Q367;
 				HEADER_SEARCH_PATHS = (
@@ -2431,6 +2559,7 @@
 		6DDA7ABE2014DE0E00BC7682 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46J356Q367;
 				LIBRARY_SEARCH_PATHS = (
@@ -2444,6 +2573,7 @@
 		6DDA7ABF2014DE0E00BC7682 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46J356Q367;
 				LIBRARY_SEARCH_PATHS = (
@@ -2457,6 +2587,7 @@
 		6DE50D5F20126FF500EC55DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46J356Q367;
 				LIBRARY_SEARCH_PATHS = (
@@ -2470,6 +2601,7 @@
 		6DE50D6020126FF500EC55DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46J356Q367;
 				LIBRARY_SEARCH_PATHS = (
@@ -2483,6 +2615,7 @@
 		6DFA819320328C4E00A9474E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46J356Q367;
 				HEADER_SEARCH_PATHS = (
@@ -2500,6 +2633,7 @@
 		6DFA819420328C4E00A9474E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46J356Q367;
 				HEADER_SEARCH_PATHS = (
@@ -2549,6 +2683,15 @@
 			buildConfigurations = (
 				6D66CFDB205937170071F0C0 /* Debug */,
 				6D66CFDC205937170071F0C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DA1373F236E3F0000E4BDCF /* Build configuration list for PBXNativeTarget "Light casters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DA1373D236E3F0000E4BDCF /* Debug */,
+				6DA1373E236E3F0000E4BDCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
