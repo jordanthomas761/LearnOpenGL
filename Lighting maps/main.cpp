@@ -204,17 +204,7 @@ int main(int argc, const char * argv[]) {
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 		
 		
-		lampShader.use();
-		lampShader.setMat4("projection", projection);
-		lampShader.setMat4("view", view);
-		model = glm::mat4();
-		model = glm::translate(model, lightPos);
-		model = glm::scale(model, glm::vec3(0.2f));
-		lampShader.setMat4("model", model);
-		
-		glBindVertexArray(lightVAO);
-		glDrawArrays(GL_TRIANGLES, 0, 36);
-		
+
 		
 		
 		// check and call events and swap the buffers

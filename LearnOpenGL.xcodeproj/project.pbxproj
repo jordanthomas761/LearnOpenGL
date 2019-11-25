@@ -95,6 +95,12 @@
 		6DE50D642012703200EC55DB /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A942010536A00072C65 /* CoreVideo.framework */; };
 		6DE50D652012703900EC55DB /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A962010537100072C65 /* IOKit.framework */; };
 		6DE50D662012704100EC55DB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A982010539200072C65 /* Cocoa.framework */; };
+		6DEEDE86238B90F900B26A53 /* container2.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DFAACDE22A0A75900C2E72D /* container2.png */; };
+		6DEEDE87238B90FC00B26A53 /* matrix.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D85EDEE23664969007A4FC3 /* matrix.jpg */; };
+		6DEEDE88238B90FF00B26A53 /* container2_specular.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DA13751237064E100E4BDCF /* container2_specular.png */; };
+		6DEEDE89238B913D00B26A53 /* VertexShader.vsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DEEDE84238B896300B26A53 /* VertexShader.vsh */; };
+		6DEEDE8A238B914000B26A53 /* FragmentShader.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DEEDE85238B89AF00B26A53 /* FragmentShader.fsh */; };
+		6DEEDE8C238B916D00B26A53 /* Lamp.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DEEDE8B238B916600B26A53 /* Lamp.fsh */; };
 		6DFA819120328C4E00A9474E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DFA819020328C4E00A9474E /* main.cpp */; };
 		6DFA81952032CC9000A9474E /* stb_image.h in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE0A272017722C0016D8F9 /* stb_image.h */; };
 		6DFA81962032CC9000A9474E /* shader.h in Sources */ = {isa = PBXBuildFile; fileRef = 6D04B7FA20138E590074724F /* shader.h */; };
@@ -181,12 +187,18 @@
 		};
 		6DA13737236E3F0000E4BDCF /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
 			files = (
+				6DEEDE86238B90F900B26A53 /* container2.png in CopyFiles */,
+				6DEEDE87238B90FC00B26A53 /* matrix.jpg in CopyFiles */,
+				6DEEDE89238B913D00B26A53 /* VertexShader.vsh in CopyFiles */,
+				6DEEDE8A238B914000B26A53 /* FragmentShader.fsh in CopyFiles */,
+				6DEEDE88238B90FF00B26A53 /* container2_specular.png in CopyFiles */,
+				6DEEDE8C238B916D00B26A53 /* Lamp.fsh in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6DCC9A852010535200072C65 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -827,6 +839,7 @@
 		6DE50D5C20126FF500EC55DB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6DEEDE84238B896300B26A53 /* VertexShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = VertexShader.vsh; sourceTree = "<group>"; };
 		6DEEDE85238B89AF00B26A53 /* FragmentShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = FragmentShader.fsh; sourceTree = "<group>"; };
+		6DEEDE8B238B916600B26A53 /* Lamp.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Lamp.fsh; sourceTree = "<group>"; };
 		6DF8B5FB21ECF5400048BF01 /* Lamp.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lamp.fsh; sourceTree = "<group>"; };
 		6DF8B5FC21ECF5400048BF01 /* VertexShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = VertexShader.vsh; sourceTree = "<group>"; };
 		6DFA818E20328C4E00A9474E /* Transformations */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Transformations; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1005,6 +1018,7 @@
 				6DA13752237064E100E4BDCF /* lighting_maps_specular_color.png */,
 				6D85EDEE23664969007A4FC3 /* matrix.jpg */,
 				6DFAACDE22A0A75900C2E72D /* container2.png */,
+				6DEEDE8B238B916600B26A53 /* Lamp.fsh */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -2333,6 +2347,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46J356Q367;
 				ENABLE_HARDENED_RUNTIME = NO;
+				HEADER_SEARCH_PATHS = (
+					./include,
+					/usr/local/include,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/glfw/3.3/lib,
@@ -2353,6 +2371,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46J356Q367;
 				ENABLE_HARDENED_RUNTIME = NO;
+				HEADER_SEARCH_PATHS = (
+					./include,
+					/usr/local/include,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/glfw/3.3/lib,
