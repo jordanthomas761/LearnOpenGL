@@ -138,7 +138,7 @@ int main(int argc, const char * argv[]) {
 	glEnableVertexAttribArray(0);
 	
 	//load texture
-	unsigned int texture1 = loadTexture("container2.png");
+	unsigned int diffuseMap = loadTexture("container2.png");
 	
 	unsigned int specularMap = loadTexture("container2_specular.png");
 	
@@ -159,11 +159,16 @@ int main(int argc, const char * argv[]) {
 		// input
 		processInput(window);
 		
+		
+		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		
 		lightingShader.use();
 		lightingShader.setVector3("objectColor", 1.0f, 1.0f, 1.0f);
 		
 		
-		lightingShader.setVector3("lightPos", lightPos);
+		lightingShader.setVector3("light.position", lightPos);
+		lightingShader.setVector3("viewPos", camera.Position);
 		
 		
 		
@@ -174,46 +179,37 @@ int main(int argc, const char * argv[]) {
 		
 		lightingShader.setFloat("material.shininess", 64.0f);
 		
-		glActiveTexture(GL_TEXTURE0);
-		glBindTexture(GL_TEXTURE_2D, texture1);
-		glActiveTexture(GL_TEXTURE1);
-		glBindTexture(GL_TEXTURE_2D, specularMap);
-		glActiveTexture(GL_TEXTURE2);
-		glBindTexture(GL_TEXTURE_2D, emissionMap);
 		
-		
-		glm::mat4 projection;
-		projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH/(float)SCR_HEIGHT, 0.1f, 100.0f);
+		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH/(float)SCR_HEIGHT, 0.1f, 100.0f);
+		glm::mat4 view =  camera.GetViewMatrix();
 		lightingShader.setMat4("projection", projection);
-		
-		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		lightingShader.setMat4("view", view);
 		
 		
 		lightPos.x = sin(glfwGetTime()) * 2.0f;
 		//lightPos.y = sin(glfwGetTime() / 2.0f) * 1.0f;
 		lightPos.z = cos(glfwGetTime()) * 2.0f;
 		
-		glm::mat4 view;
-		view =  camera.GetViewMatrix();
-		lightingShader.setMat4("view", view);
-		
 		glm::mat4 model;
-		//model = glm::rotate(model, (float)glfwGetTime() * glm::radians(45.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		lightingShader.setMat4("model", model);
 		
+		glActiveTexture(GL_TEXTURE0);
+		glBindTexture(GL_TEXTURE_2D, diffuseMap);
+		glActiveTexture(GL_TEXTURE1);
+		glBindTexture(GL_TEXTURE_2D, specularMap);
+		glActiveTexture(GL_TEXTURE2);
+		glBindTexture(GL_TEXTURE_2D, emissionMap);
 		
 		glBindVertexArray(cubeVAO);
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 		
 		
 		lampShader.use();
+		lampShader.setMat4("projection", projection);
+		lampShader.setMat4("view", view);
 		model = glm::mat4();
 		model = glm::translate(model, lightPos);
 		model = glm::scale(model, glm::vec3(0.2f));
-		
-		lampShader.setMat4("projection", projection);
-		lampShader.setMat4("view", view);
 		lampShader.setMat4("model", model);
 		
 		glBindVertexArray(lightVAO);

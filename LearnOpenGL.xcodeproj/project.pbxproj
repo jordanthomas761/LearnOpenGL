@@ -825,6 +825,8 @@
 		6DE50D28201260FB00EC55DB /* Exercise 3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Exercise 3.cpp"; sourceTree = "<group>"; };
 		6DE50D5A20126FF500EC55DB /* Shaders */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Shaders; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DE50D5C20126FF500EC55DB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6DEEDE84238B896300B26A53 /* VertexShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = VertexShader.vsh; sourceTree = "<group>"; };
+		6DEEDE85238B89AF00B26A53 /* FragmentShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = FragmentShader.fsh; sourceTree = "<group>"; };
 		6DF8B5FB21ECF5400048BF01 /* Lamp.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lamp.fsh; sourceTree = "<group>"; };
 		6DF8B5FC21ECF5400048BF01 /* VertexShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = VertexShader.vsh; sourceTree = "<group>"; };
 		6DFA818E20328C4E00A9474E /* Transformations */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Transformations; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1023,6 +1025,8 @@
 			isa = PBXGroup;
 			children = (
 				6DA1373B236E3F0000E4BDCF /* main.cpp */,
+				6DEEDE84238B896300B26A53 /* VertexShader.vsh */,
+				6DEEDE85238B89AF00B26A53 /* FragmentShader.fsh */,
 			);
 			path = "Light casters";
 			sourceTree = "<group>";
