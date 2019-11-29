@@ -25,7 +25,7 @@ float deltaTime = 0.0f;	// time between current frame and last frame
 float lastFrame = 0.0f;
 bool firstMouse = true;
 
-glm::vec3 lightPos(-0.2f, -1.0f, -0.3f);
+glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
 
 float vertices[] = {
 	// positions          	// normals           	// texture coords
@@ -175,7 +175,7 @@ int main(int argc, const char * argv[]) {
 		lightingShader.use();
 		
 		
-		lightingShader.setVector3("light.direction",  -0.2f, -1.0f, -0.3f);
+		lightingShader.setVector3("light.position",  lightPos);
 		lightingShader.setVector3("viewPos", camera.Position);
 		
 		
@@ -184,6 +184,10 @@ int main(int argc, const char * argv[]) {
 		lightingShader.setVector3("light.ambient", 0.1f, 0.1f, 0.1f);
 		lightingShader.setVector3("light.diffuse", 0.5f, 0.5f, 0.5f);
 		lightingShader.setVector3("light.specular", 1.0f, 1.0f, 1.0f);
+        
+        lightingShader.setFloat("light.constant", 1.0f);
+        lightingShader.setFloat("light.linear", 0.09f);
+        lightingShader.setFloat("light.quadratic", 0.032f);
 		
 		lightingShader.setFloat("material.shininess", 64.0f);
 		
@@ -210,8 +214,19 @@ int main(int argc, const char * argv[]) {
 
 			glDrawArrays(GL_TRIANGLES, 0, 36);
 		}
+        
 		
-		
+		lampShader.use();
+        glm::mat4 model = glm::mat4();
+        model = glm::translate(model, lightPos);
+        model = glm::scale(model, glm::vec3(0.2f));
+        
+        lampShader.setMat4("projection", projection);
+        lampShader.setMat4("view", view);
+        lampShader.setMat4("model", model);
+        
+        glBindVertexArray(lightVAO);
+        glDrawArrays(GL_TRIANGLES, 0, 36);
 		
 		// check and call events and swap the buffers
 		glfwSwapBuffers(window);
