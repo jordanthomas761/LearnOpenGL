@@ -85,12 +85,8 @@ glm::vec3 cubePositions[] = {
 	glm::vec3(-1.3f,  1.0f, -1.5f)
 };
 
-int main(int argc, const char * argv[]) {
-	
-	if(!glfwInit()){
-		std::cout <<"GLFW did not initalize" << std::endl;
-		return -1;
-	}
+
+GLFWwindow* inizilizeWindow() {
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
@@ -100,21 +96,123 @@ int main(int argc, const char * argv[]) {
 	if (window == NULL) {
 		std::cout << "Failed to create GLFW window" << std::endl;
 		glfwTerminate();
-		return -1;
 	}
 	glfwMakeContextCurrent(window);
-	
+	return window;
+}
+
+int inizilizeGLAD() {
 	if(!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)){
 		std::cout << "Filed to load GLAD" << std::endl;
 		return -1;
+	} else {
+		return 0;
 	}
-	
+}
+
+void setFrame(GLFWwindow *window) {
 	glfwGetFramebufferSize(window, &SCR_WIDTH, &SCR_HEIGHT);
 	glViewport(0, 0, SCR_WIDTH, SCR_HEIGHT);
 	
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 	glfwSetCursorPosCallback(window, mouse_callback);
 	glfwSetScrollCallback(window, scroll_callback);
+}
+
+static void update(unsigned int cubeVAO, unsigned int diffuseMap, Shader &lampShader, unsigned int lightVAO, Shader &lightingShader, unsigned int specularMap, GLFWwindow *window) {
+	while(!glfwWindowShouldClose(window)){
+		// Frame update
+		float currentFrame = glfwGetTime();
+		deltaTime = currentFrame - lastFrame;
+		lastFrame = currentFrame;
+		
+		// input
+		processInput(window);
+		
+		
+		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		
+		lightingShader.use();
+		
+		
+		lightingShader.setVector3("light.position",  lightPos);
+		lightingShader.setVector3("viewPos", camera.Position);
+		
+		
+		
+		
+		lightingShader.setVector3("light.ambient", 0.1f, 0.1f, 0.1f);
+		lightingShader.setVector3("light.diffuse", 0.5f, 0.5f, 0.5f);
+		lightingShader.setVector3("light.specular", 1.0f, 1.0f, 1.0f);
+		
+		lightingShader.setFloat("light.constant", 1.0f);
+		lightingShader.setFloat("light.linear", 0.09f);
+		lightingShader.setFloat("light.quadratic", 0.032f);
+		
+		lightingShader.setFloat("material.shininess", 64.0f);
+		
+		
+		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH/(float)SCR_HEIGHT, 0.1f, 100.0f);
+		glm::mat4 view =  camera.GetViewMatrix();
+		lightingShader.setMat4("projection", projection);
+		lightingShader.setMat4("view", view);
+		
+		
+		glActiveTexture(GL_TEXTURE0);
+		glBindTexture(GL_TEXTURE_2D, diffuseMap);
+		glActiveTexture(GL_TEXTURE1);
+		glBindTexture(GL_TEXTURE_2D, specularMap);
+		
+		glBindVertexArray(cubeVAO);
+		for(unsigned int i = 0; i < 10; i++)
+		{
+			glm::mat4 model = glm::mat4(1.0f);
+			model = glm::translate(model, cubePositions[i]);
+			float angle = 20.0f * i;
+			model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
+			lightingShader.setMat4("model", model);
+			
+			glDrawArrays(GL_TRIANGLES, 0, 36);
+		}
+		
+		
+		lampShader.use();
+		glm::mat4 model = glm::mat4();
+		model = glm::translate(model, lightPos);
+		model = glm::scale(model, glm::vec3(0.2f));
+		
+		lampShader.setMat4("projection", projection);
+		lampShader.setMat4("view", view);
+		lampShader.setMat4("model", model);
+		
+		glBindVertexArray(lightVAO);
+		glDrawArrays(GL_TRIANGLES, 0, 36);
+		
+		// check and call events and swap the buffers
+		glfwSwapBuffers(window);
+		glfwPollEvents();
+	}
+}
+
+int main(int argc, const char * argv[]) {
+	
+	if(!glfwInit()){
+		std::cout <<"GLFW did not initalize" << std::endl;
+		return -1;
+	}
+	
+	
+	GLFWwindow* window = inizilizeWindow();
+	if (window == NULL) {
+		return -1;
+	}
+	
+	if(inizilizeGLAD()){
+		return -1;
+	}
+	
+	setFrame(window);
 	
 	// tell GLFW to capture our mouse
 	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
@@ -159,79 +257,7 @@ int main(int argc, const char * argv[]) {
 	lightingShader.setInt("material.specular", 1);
 	
 	
-	while(!glfwWindowShouldClose(window)){
-		// Frame update
-		float currentFrame = glfwGetTime();
-		deltaTime = currentFrame - lastFrame;
-		lastFrame = currentFrame;
-		
-		// input
-		processInput(window);
-		
-		
-		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-		
-		lightingShader.use();
-		
-		
-		lightingShader.setVector3("light.position",  lightPos);
-		lightingShader.setVector3("viewPos", camera.Position);
-		
-		
-		
-		
-		lightingShader.setVector3("light.ambient", 0.1f, 0.1f, 0.1f);
-		lightingShader.setVector3("light.diffuse", 0.5f, 0.5f, 0.5f);
-		lightingShader.setVector3("light.specular", 1.0f, 1.0f, 1.0f);
-        
-        lightingShader.setFloat("light.constant", 1.0f);
-        lightingShader.setFloat("light.linear", 0.09f);
-        lightingShader.setFloat("light.quadratic", 0.032f);
-		
-		lightingShader.setFloat("material.shininess", 64.0f);
-		
-		
-		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH/(float)SCR_HEIGHT, 0.1f, 100.0f);
-		glm::mat4 view =  camera.GetViewMatrix();
-		lightingShader.setMat4("projection", projection);
-		lightingShader.setMat4("view", view);
-		
-		
-		glActiveTexture(GL_TEXTURE0);
-		glBindTexture(GL_TEXTURE_2D, diffuseMap);
-		glActiveTexture(GL_TEXTURE1);
-		glBindTexture(GL_TEXTURE_2D, specularMap);
-		
-		glBindVertexArray(cubeVAO);
-		for(unsigned int i = 0; i < 10; i++)
-		{
-			glm::mat4 model = glm::mat4(1.0f);
-			model = glm::translate(model, cubePositions[i]);
-			float angle = 20.0f * i;
-			model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
-			lightingShader.setMat4("model", model);
-
-			glDrawArrays(GL_TRIANGLES, 0, 36);
-		}
-        
-		
-		lampShader.use();
-        glm::mat4 model = glm::mat4();
-        model = glm::translate(model, lightPos);
-        model = glm::scale(model, glm::vec3(0.2f));
-        
-        lampShader.setMat4("projection", projection);
-        lampShader.setMat4("view", view);
-        lampShader.setMat4("model", model);
-        
-        glBindVertexArray(lightVAO);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-		
-		// check and call events and swap the buffers
-		glfwSwapBuffers(window);
-		glfwPollEvents();
-	}
+	update(cubeVAO, diffuseMap, lampShader, lightVAO, lightingShader, specularMap, window);
 	
 	glDeleteVertexArrays(1, &cubeVAO);
 	glDeleteVertexArrays(1, &lightVAO);
