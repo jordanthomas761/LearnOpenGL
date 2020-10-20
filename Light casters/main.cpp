@@ -218,7 +218,7 @@ int main(int argc, const char * argv[]) {
 	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 	
 	
-	Shader lightingShader("VertexShader.vsh", "FragmentShader.fsh");
+	Shader lightingShader("VertexShader.vsh", "PointLightShader.fsh");
 	Shader lampShader("VertexShader.vsh", "Lamp.fsh");
 	
 	glEnable(GL_DEPTH_TEST);

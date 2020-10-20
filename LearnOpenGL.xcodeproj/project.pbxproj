@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6D04B7FB20138FA50074724F /* shader.h in Sources */ = {isa = PBXBuildFile; fileRef = 6D04B7FA20138E590074724F /* shader.h */; };
+		6D1C3A5D2535328A00BBCD34 /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFEE58E241AC3F600FFD680 /* libglfw.dylib */; };
+		6D1C3A66253532A200BBCD34 /* libglfw.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 6DFEE58E241AC3F600FFD680 /* libglfw.dylib */; };
 		6D2407C321D2880C003B68D5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D2407C221D2880C003B68D5 /* main.cpp */; };
 		6D2407C721D28829003B68D5 /* stb_image.h in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE0A272017722C0016D8F9 /* stb_image.h */; };
 		6D2407C821D28829003B68D5 /* shader.h in Sources */ = {isa = PBXBuildFile; fileRef = 6D04B7FA20138E590074724F /* shader.h */; };
@@ -22,7 +24,6 @@
 		6D3011AE234CBFA80031AEA5 /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D91054522D888E600A7FE6D /* libglfw.dylib */; };
 		6D3011AF234CBFB00031AEA5 /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D91054522D888E600A7FE6D /* libglfw.dylib */; };
 		6D3011B0234CBFC50031AEA5 /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D91054522D888E600A7FE6D /* libglfw.dylib */; };
-		6D3011B1234CBFD00031AEA5 /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D91054522D888E600A7FE6D /* libglfw.dylib */; };
 		6D376CFC21424DA3006E23CD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D376CFB21424DA3006E23CD /* main.cpp */; };
 		6D376D0021424DF6006E23CD /* stb_image.h in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE0A272017722C0016D8F9 /* stb_image.h */; };
 		6D376D0121424DF6006E23CD /* shader.h in Sources */ = {isa = PBXBuildFile; fileRef = 6D04B7FA20138E590074724F /* shader.h */; };
@@ -62,19 +63,16 @@
 		6D85EE0823668892007A4FC3 /* FragmentShader.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D376D0B214276BE006E23CD /* FragmentShader.fsh */; };
 		6D85EE0923668894007A4FC3 /* VertexShader.vsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D376D0A2142642F006E23CD /* VertexShader.vsh */; };
 		6D91054622D888E600A7FE6D /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D91054522D888E600A7FE6D /* libglfw.dylib */; };
-		6D91054722D8890100A7FE6D /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D91054522D888E600A7FE6D /* libglfw.dylib */; };
-		6D91054822D8890B00A7FE6D /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D91054522D888E600A7FE6D /* libglfw.dylib */; };
 		6DA1373C236E3F0000E4BDCF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DA1373B236E3F0000E4BDCF /* main.cpp */; };
-		6DA13740236E3F1200E4BDCF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A982010539200072C65 /* Cocoa.framework */; };
-		6DA13741236E3F2800E4BDCF /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A942010536A00072C65 /* CoreVideo.framework */; };
-		6DA13742236E3F3000E4BDCF /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A962010537100072C65 /* IOKit.framework */; };
-		6DA13743236E3F3F00E4BDCF /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A922010536300072C65 /* OpenGL.framework */; };
-		6DA13747236E3FC500E4BDCF /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D91054522D888E600A7FE6D /* libglfw.dylib */; };
 		6DA1374A236E402F00E4BDCF /* camera.h in Sources */ = {isa = PBXBuildFile; fileRef = 6D1A3F9921414E0F008CDF4F /* camera.h */; };
 		6DA1374B236E403100E4BDCF /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DCC9AA52010553800072C65 /* glad.c */; };
 		6DA1374C236E403400E4BDCF /* shader.h in Sources */ = {isa = PBXBuildFile; fileRef = 6D04B7FA20138E590074724F /* shader.h */; };
 		6DA1374D236E403700E4BDCF /* stb_image.h in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE0A272017722C0016D8F9 /* stb_image.h */; };
 		6DA137532370651000E4BDCF /* container2_specular.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DA13751237064E100E4BDCF /* container2_specular.png */; };
+		6DA8B54523C265740022BC84 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A922010536300072C65 /* OpenGL.framework */; };
+		6DA8B54723C265760022BC84 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A962010537100072C65 /* IOKit.framework */; };
+		6DA8B54923C265770022BC84 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A942010536A00072C65 /* CoreVideo.framework */; };
+		6DA8B54B23C265790022BC84 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A982010539200072C65 /* Cocoa.framework */; };
 		6DCC9A932010536300072C65 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A922010536300072C65 /* OpenGL.framework */; };
 		6DCC9A952010536A00072C65 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A942010536A00072C65 /* CoreVideo.framework */; };
 		6DCC9A972010537100072C65 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A962010537100072C65 /* IOKit.framework */; };
@@ -99,8 +97,12 @@
 		6DEEDE87238B90FC00B26A53 /* matrix.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D85EDEE23664969007A4FC3 /* matrix.jpg */; };
 		6DEEDE88238B90FF00B26A53 /* container2_specular.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DA13751237064E100E4BDCF /* container2_specular.png */; };
 		6DEEDE89238B913D00B26A53 /* VertexShader.vsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DEEDE84238B896300B26A53 /* VertexShader.vsh */; };
-		6DEEDE8A238B914000B26A53 /* FragmentShader.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DEEDE85238B89AF00B26A53 /* FragmentShader.fsh */; };
+		6DEEDE8A238B914000B26A53 /* PointLightShader.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DEEDE85238B89AF00B26A53 /* PointLightShader.fsh */; };
 		6DEEDE8C238B916D00B26A53 /* Lamp.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DEEDE8B238B916600B26A53 /* Lamp.fsh */; };
+		6DF838CC241AC635006C080A /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFEE592241AC49900FFD680 /* libglfw.dylib */; };
+		6DF838CD241AC635006C080A /* libglfw.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 6DFEE592241AC49900FFD680 /* libglfw.dylib */; };
+		6DF838D4241AC68C006C080A /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFEE58E241AC3F600FFD680 /* libglfw.dylib */; };
+		6DF838D5241AC68C006C080A /* libglfw.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 6DFEE58E241AC3F600FFD680 /* libglfw.dylib */; };
 		6DFA819120328C4E00A9474E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DFA819020328C4E00A9474E /* main.cpp */; };
 		6DFA81952032CC9000A9474E /* stb_image.h in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE0A272017722C0016D8F9 /* stb_image.h */; };
 		6DFA81962032CC9000A9474E /* shader.h in Sources */ = {isa = PBXBuildFile; fileRef = 6D04B7FA20138E590074724F /* shader.h */; };
@@ -116,6 +118,9 @@
 		6DFE0A2E2017743B0016D8F9 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A962010537100072C65 /* IOKit.framework */; };
 		6DFE0A2F201774450016D8F9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A982010539200072C65 /* Cocoa.framework */; };
 		6DFE0A3320177D010016D8F9 /* stb_image.h in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE0A272017722C0016D8F9 /* stb_image.h */; };
+		6DFEE59E241AC51100FFD680 /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFEE592241AC49900FFD680 /* libglfw.dylib */; };
+		6DFEE59F241AC52800FFD680 /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFEE58E241AC3F600FFD680 /* libglfw.dylib */; };
+		6DFEE5A0241AC52800FFD680 /* libglfw.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 6DFEE58E241AC3F600FFD680 /* libglfw.dylib */; };
 		6FA7C3A8236CD3DA008032AD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FA7C3A7236CD3D9008032AD /* main.cpp */; };
 		6FA7C3AA236CD43F008032AD /* FragmentShader.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6FA7C3A9236CD40F008032AD /* FragmentShader.fsh */; };
 /* End PBXBuildFile section */
@@ -135,6 +140,17 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		6D1C3A67253532A200BBCD34 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6D1C3A66253532A200BBCD34 /* libglfw.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6D2407BE21D2880C003B68D5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
@@ -194,7 +210,7 @@
 				6DEEDE86238B90F900B26A53 /* container2.png in CopyFiles */,
 				6DEEDE87238B90FC00B26A53 /* matrix.jpg in CopyFiles */,
 				6DEEDE89238B913D00B26A53 /* VertexShader.vsh in CopyFiles */,
-				6DEEDE8A238B914000B26A53 /* FragmentShader.fsh in CopyFiles */,
+				6DEEDE8A238B914000B26A53 /* PointLightShader.fsh in CopyFiles */,
 				6DEEDE88238B90FF00B26A53 /* container2_specular.png in CopyFiles */,
 				6DEEDE8C238B916D00B26A53 /* Lamp.fsh in CopyFiles */,
 			);
@@ -237,6 +253,28 @@
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		6DF838CE241AC635006C080A /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6DF838CD241AC635006C080A /* libglfw.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DF838D6241AC68C006C080A /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6DF838D5241AC68C006C080A /* libglfw.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6DFA818C20328C4E00A9474E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -245,6 +283,17 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		6DFEE5A1241AC52800FFD680 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6DFEE5A0241AC52800FFD680 /* libglfw.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -282,6 +331,7 @@
 		6DA13752237064E100E4BDCF /* lighting_maps_specular_color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lighting_maps_specular_color.png; sourceTree = "<group>"; };
 		6DA4072B2019B709009A454A /* VertexShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = VertexShader.glsl; sourceTree = "<group>"; };
 		6DA4072C2019B81C009A454A /* FragmentShader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = FragmentShader.glsl; sourceTree = "<group>"; };
+		6DA8B53A23C265530022BC84 /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = ../../../../../usr/local/Cellar/glfw/3.3.1/lib/libglfw.dylib; sourceTree = "<group>"; };
 		6DA9F10A20127ABA003BEBE0 /* glfw3.pc */ = {isa = PBXFileReference; lastKnownFileType = text; name = glfw3.pc; path = ../../../../../usr/local/Cellar/glfw/3.2.1/lib/pkgconfig/glfw3.pc; sourceTree = "<group>"; };
 		6DBED76621452FED009E7721 /* Lamp.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Lamp.fsh; sourceTree = "<group>"; };
 		6DCC9A872010535200072C65 /* HelloTriangle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloTriangle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -838,7 +888,7 @@
 		6DE50D5A20126FF500EC55DB /* Shaders */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Shaders; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DE50D5C20126FF500EC55DB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6DEEDE84238B896300B26A53 /* VertexShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = VertexShader.vsh; sourceTree = "<group>"; };
-		6DEEDE85238B89AF00B26A53 /* FragmentShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = FragmentShader.fsh; sourceTree = "<group>"; };
+		6DEEDE85238B89AF00B26A53 /* PointLightShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = PointLightShader.fsh; sourceTree = "<group>"; };
 		6DEEDE8B238B916600B26A53 /* Lamp.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Lamp.fsh; sourceTree = "<group>"; };
 		6DF8B5FB21ECF5400048BF01 /* Lamp.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Lamp.fsh; sourceTree = "<group>"; };
 		6DF8B5FC21ECF5400048BF01 /* VertexShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = VertexShader.vsh; sourceTree = "<group>"; };
@@ -848,6 +898,8 @@
 		6DFAACDE22A0A75900C2E72D /* container2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = container2.png; sourceTree = "<group>"; };
 		6DFE0A272017722C0016D8F9 /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
 		6DFE0A302017762F0016D8F9 /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpg; sourceTree = "<group>"; };
+		6DFEE58E241AC3F600FFD680 /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = ../../../../../usr/local/Cellar/glfw/3.3.2/lib/libglfw.dylib; sourceTree = "<group>"; };
+		6DFEE592241AC49900FFD680 /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = ../../../../../usr/local/lib/libglfw.dylib; sourceTree = "<group>"; };
 		6FA7C3A7236CD3D9008032AD /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6FA7C3A9236CD40F008032AD /* FragmentShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = FragmentShader.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -857,7 +909,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D91054822D8890B00A7FE6D /* libglfw.dylib in Frameworks */,
+				6DF838D4241AC68C006C080A /* libglfw.dylib in Frameworks */,
 				6D2407CB21D28845003B68D5 /* Cocoa.framework in Frameworks */,
 				6D2407CC21D28853003B68D5 /* IOKit.framework in Frameworks */,
 				6D2407CD21D28864003B68D5 /* CoreVideo.framework in Frameworks */,
@@ -881,8 +933,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D91054722D8890100A7FE6D /* libglfw.dylib in Frameworks */,
 				6D3997F221DADEF200365D14 /* Cocoa.framework in Frameworks */,
+				6DFEE59E241AC51100FFD680 /* libglfw.dylib in Frameworks */,
+				6DFEE59F241AC52800FFD680 /* libglfw.dylib in Frameworks */,
 				6D3997F121DADEE200365D14 /* CoreVideo.framework in Frameworks */,
 				6D3997F021DADEDA00365D14 /* IOKit.framework in Frameworks */,
 				6D3997EF21DADED200365D14 /* OpenGL.framework in Frameworks */,
@@ -905,11 +958,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DA13747236E3FC500E4BDCF /* libglfw.dylib in Frameworks */,
-				6DA13740236E3F1200E4BDCF /* Cocoa.framework in Frameworks */,
-				6DA13743236E3F3F00E4BDCF /* OpenGL.framework in Frameworks */,
-				6DA13741236E3F2800E4BDCF /* CoreVideo.framework in Frameworks */,
-				6DA13742236E3F3000E4BDCF /* IOKit.framework in Frameworks */,
+				6DF838CC241AC635006C080A /* libglfw.dylib in Frameworks */,
+				6DA8B54B23C265790022BC84 /* Cocoa.framework in Frameworks */,
+				6DA8B54723C265760022BC84 /* IOKit.framework in Frameworks */,
+				6DA8B54523C265740022BC84 /* OpenGL.framework in Frameworks */,
+				6DA8B54923C265770022BC84 /* CoreVideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -917,7 +970,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D3011B1234CBFD00031AEA5 /* libglfw.dylib in Frameworks */,
+				6D1C3A5D2535328A00BBCD34 /* libglfw.dylib in Frameworks */,
 				6DCC9A992010539200072C65 /* Cocoa.framework in Frameworks */,
 				6DCC9A972010537100072C65 /* IOKit.framework in Frameworks */,
 				6DCC9A952010536A00072C65 /* CoreVideo.framework in Frameworks */,
@@ -1040,7 +1093,7 @@
 			children = (
 				6DA1373B236E3F0000E4BDCF /* main.cpp */,
 				6DEEDE84238B896300B26A53 /* VertexShader.vsh */,
-				6DEEDE85238B89AF00B26A53 /* FragmentShader.fsh */,
+				6DEEDE85238B89AF00B26A53 /* PointLightShader.fsh */,
 			);
 			path = "Light casters";
 			sourceTree = "<group>";
@@ -1098,6 +1151,9 @@
 			isa = PBXGroup;
 			children = (
 				6D91054522D888E600A7FE6D /* libglfw.dylib */,
+				6DA8B53A23C265530022BC84 /* libglfw.dylib */,
+				6DFEE58E241AC3F600FFD680 /* libglfw.dylib */,
+				6DFEE592241AC49900FFD680 /* libglfw.dylib */,
 				6DFAACDB22A0A59100C2E72D /* libglfw.3.3.dylib */,
 				6DDAB7C421369A65004B8E8B /* glm */,
 				6DDAB7C2213699F3004B8E8B /* glm.pc */,
@@ -1818,6 +1874,7 @@
 				6D2407BC21D2880C003B68D5 /* Sources */,
 				6D2407BD21D2880C003B68D5 /* Frameworks */,
 				6D2407BE21D2880C003B68D5 /* CopyFiles */,
+				6DF838D6241AC68C006C080A /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -1852,6 +1909,7 @@
 				6D3997E021DADE3E00365D14 /* Sources */,
 				6D3997E121DADE3E00365D14 /* Frameworks */,
 				6D85EDF5236687BA007A4FC3 /* CopyFiles */,
+				6DFEE5A1241AC52800FFD680 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -1887,6 +1945,7 @@
 				6DA13735236E3F0000E4BDCF /* Sources */,
 				6DA13736236E3F0000E4BDCF /* Frameworks */,
 				6DA13737236E3F0000E4BDCF /* CopyFiles */,
+				6DF838CE241AC635006C080A /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -1904,6 +1963,7 @@
 				6DCC9A832010535200072C65 /* Sources */,
 				6DCC9A842010535200072C65 /* Frameworks */,
 				6DCC9A852010535200072C65 /* CopyFiles */,
+				6D1C3A67253532A200BBCD34 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -2190,6 +2250,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/glfw/3.3/lib,
+					/usr/local/Cellar/glfw/3.3.2/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -2212,6 +2273,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/glfw/3.3/lib,
+					/usr/local/Cellar/glfw/3.3.2/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_FAST_MATH = YES;
@@ -2271,6 +2333,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/glfw/3.3/lib,
+					/usr/local/Cellar/glfw/3.3.1/lib,
+					/usr/local/Cellar/glfw/3.3.2/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -2293,6 +2357,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/glfw/3.3/lib,
+					/usr/local/Cellar/glfw/3.3.1/lib,
+					/usr/local/Cellar/glfw/3.3.2/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_FAST_MATH = YES;
@@ -2354,6 +2420,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/glfw/3.3/lib,
+					/usr/local/Cellar/glfw/3.3.1/lib,
+					/usr/local/Cellar/glfw/3.3.2/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -2378,6 +2446,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/glfw/3.3/lib,
+					/usr/local/Cellar/glfw/3.3.1/lib,
+					/usr/local/Cellar/glfw/3.3.2/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_FAST_MATH = YES;
@@ -2521,6 +2591,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/glfw/3.3/lib,
+					/usr/local/Cellar/glfw/3.3.2/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2540,6 +2611,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/glfw/3.3/lib,
+					/usr/local/Cellar/glfw/3.3.2/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = "$(TARGET_NAME)";
