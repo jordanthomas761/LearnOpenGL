@@ -119,7 +119,7 @@ void setFrame(GLFWwindow *window) {
 	glfwSetScrollCallback(window, scroll_callback);
 }
 
-static void update(unsigned int cubeVAO, unsigned int diffuseMap, Shader &lampShader, unsigned int lightVAO, Shader &lightingShader, unsigned int specularMap, GLFWwindow *window) {
+static void update(unsigned int cubeVAO, unsigned int diffuseMap, unsigned int lightVAO, Shader &lightingShader, unsigned int specularMap, GLFWwindow *window) {
 	while(!glfwWindowShouldClose(window)){
 		// Frame update
 		float currentFrame = glfwGetTime();
@@ -136,22 +136,24 @@ static void update(unsigned int cubeVAO, unsigned int diffuseMap, Shader &lampSh
 		lightingShader.use();
 		
 		
-		lightingShader.setVector3("light.position",  lightPos);
+		lightingShader.setVector3("light.position",  camera.Position);
+		lightingShader.setVector3("light.direction",  camera.Front);
+		lightingShader.setFloat("light.cutOff", glm::cos(glm::radians(12.5f)));
+		lightingShader.setFloat("light.outerCutOff", glm::cos(glm::radians(17.5f)));
 		lightingShader.setVector3("viewPos", camera.Position);
 		
 		
 		
 		
 		lightingShader.setVector3("light.ambient", 0.1f, 0.1f, 0.1f);
-		lightingShader.setVector3("light.diffuse", 0.5f, 0.5f, 0.5f);
+		lightingShader.setVector3("light.diffuse", 0.8f, 0.8f, 0.8f);
 		lightingShader.setVector3("light.specular", 1.0f, 1.0f, 1.0f);
 		
 		lightingShader.setFloat("light.constant", 1.0f);
 		lightingShader.setFloat("light.linear", 0.09f);
 		lightingShader.setFloat("light.quadratic", 0.032f);
 		
-		lightingShader.setFloat("material.shininess", 64.0f);
-		
+		lightingShader.setFloat("material.shininess", 32.0f);
 		
 		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH/(float)SCR_HEIGHT, 0.1f, 100.0f);
 		glm::mat4 view =  camera.GetViewMatrix();
@@ -176,18 +178,6 @@ static void update(unsigned int cubeVAO, unsigned int diffuseMap, Shader &lampSh
 			glDrawArrays(GL_TRIANGLES, 0, 36);
 		}
 		
-		
-		lampShader.use();
-		glm::mat4 model = glm::mat4();
-		model = glm::translate(model, lightPos);
-		model = glm::scale(model, glm::vec3(0.2f));
-		
-		lampShader.setMat4("projection", projection);
-		lampShader.setMat4("view", view);
-		lampShader.setMat4("model", model);
-		
-		glBindVertexArray(lightVAO);
-		glDrawArrays(GL_TRIANGLES, 0, 36);
 		
 		// check and call events and swap the buffers
 		glfwSwapBuffers(window);
@@ -218,8 +208,7 @@ int main(int argc, const char * argv[]) {
 	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 	
 	
-	Shader lightingShader("VertexShader.vsh", "PointLightShader.fsh");
-	Shader lampShader("VertexShader.vsh", "Lamp.fsh");
+	Shader lightingShader("VertexShader.vsh", "Flashlight.fsh");
 	
 	glEnable(GL_DEPTH_TEST);
 	
@@ -257,7 +246,7 @@ int main(int argc, const char * argv[]) {
 	lightingShader.setInt("material.specular", 1);
 	
 	
-	update(cubeVAO, diffuseMap, lampShader, lightVAO, lightingShader, specularMap, window);
+	update(cubeVAO, diffuseMap, lightVAO, lightingShader, specularMap, window);
 	
 	glDeleteVertexArrays(1, &cubeVAO);
 	glDeleteVertexArrays(1, &lightVAO);

@@ -87,6 +87,7 @@
 		6DD6EB5A203CA3930071BB38 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A962010537100072C65 /* IOKit.framework */; };
 		6DD6EB5B203CA39B0071BB38 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A982010539200072C65 /* Cocoa.framework */; };
 		6DDA7ABD2014DE0E00BC7682 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DDA7ABC2014DE0E00BC7682 /* main.cpp */; };
+		6DDE2FE2253E767B00D12956 /* Flashlight.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6DDE2FDA253E725100D12956 /* Flashlight.fsh */; };
 		6DE50D5D20126FF500EC55DB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6DE50D5C20126FF500EC55DB /* main.cpp */; };
 		6DE50D612012701300EC55DB /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DCC9AA52010553800072C65 /* glad.c */; };
 		6DE50D632012702A00EC55DB /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCC9A922010536300072C65 /* OpenGL.framework */; };
@@ -212,6 +213,7 @@
 				6DEEDE89238B913D00B26A53 /* VertexShader.vsh in CopyFiles */,
 				6DEEDE8A238B914000B26A53 /* PointLightShader.fsh in CopyFiles */,
 				6DEEDE88238B90FF00B26A53 /* container2_specular.png in CopyFiles */,
+				6DDE2FE2253E767B00D12956 /* Flashlight.fsh in CopyFiles */,
 				6DEEDE8C238B916D00B26A53 /* Lamp.fsh in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -879,6 +881,7 @@
 		6DDABAE521369E21004B8E8B /* rotate_normalized_axis.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = rotate_normalized_axis.hpp; sourceTree = "<group>"; };
 		6DDABAE621369E21004B8E8B /* projection.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = projection.inl; sourceTree = "<group>"; };
 		6DDABAE721369E21004B8E8B /* type_aligned.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = type_aligned.hpp; sourceTree = "<group>"; };
+		6DDE2FDA253E725100D12956 /* Flashlight.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Flashlight.fsh; sourceTree = "<group>"; };
 		6DE50CDE20109A2B00EC55DB /* khrplatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = khrplatform.h; sourceTree = "<group>"; };
 		6DE50CE020109A2B00EC55DB /* glad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glad.h; sourceTree = "<group>"; };
 		6DE50CE12010B00100EC55DB /* SimpleVertexShader.vertexshader */ = {isa = PBXFileReference; lastKnownFileType = text; path = SimpleVertexShader.vertexshader; sourceTree = "<group>"; };
@@ -1094,6 +1097,7 @@
 				6DA1373B236E3F0000E4BDCF /* main.cpp */,
 				6DEEDE84238B896300B26A53 /* VertexShader.vsh */,
 				6DEEDE85238B89AF00B26A53 /* PointLightShader.fsh */,
+				6DDE2FDA253E725100D12956 /* Flashlight.fsh */,
 			);
 			path = "Light casters";
 			sourceTree = "<group>";
